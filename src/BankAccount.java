@@ -5,21 +5,21 @@ public class BankAccount {
     /**
      * I'm still fixing the variable names..
      */
-    private double balance_cdn;
-    private String account_number;
-    private String member_last_name;
-    public BankAccount(double balance_cdn, String account_number, String member_last_name) {
-        this.balance_cdn = balance_cdn;
-        this.account_number = account_number;
-        this.member_last_name = member_last_name;
+    private double balanceCdn;
+    private String accountNumber;
+    private String memberLastName;
+    public BankAccount(double balanceCdn, String accountNumber, String memberLastName) {
+        this.balanceCdn = balanceCdn;
+        this.accountNumber = accountNumber;
+        this.memberLastName = memberLastName;
     }
 
     public void withdraw(double amount_cdn) {
-        this.balance_cdn -= amount_cdn;
+        this.balanceCdn -= amount_cdn;
     }
 
     public void deposit(double amount_cdn) {
-        this.balance_cdn += amount_cdn;
+        this.balanceCdn += amount_cdn;
     }
 
     public void transfer(double amount_cdn, BankAccount recipient_account) {
@@ -27,15 +27,15 @@ public class BankAccount {
         this.withdraw(amount_cdn);
     }
 
-    public double getBalance_cdn() {
-        return balance_cdn;
+    public double getBalanceCdn() {
+        return balanceCdn;
     }
 
-    public String getAccount_number() {
-        return account_number;
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
-    public String getMember_last_name() {
-        return member_last_name;
+    public String getMemberLastName() {
+        return memberLastName;
     }
 }
